@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  devise:
+    omniauth_callbacks:
+      failure: We are unable to authenticate with %{kind}. Please try another method.
