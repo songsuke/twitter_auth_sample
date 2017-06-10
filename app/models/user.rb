@@ -15,7 +15,7 @@ class User < ApplicationRecord
   def self.from_omniauth(data)
     # Update user when user already exists, and sign in with Twitter
     user = User.find_by_email(data.info.email) if data.info.email.present?
-    if user&.uid.nil?
+    if user && user.uid.nil?
       user.update(provider: data.provider, uid: data.uid)
       user
     end
